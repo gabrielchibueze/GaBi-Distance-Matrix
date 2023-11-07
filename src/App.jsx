@@ -11,17 +11,20 @@ function App() {
   const handleCalculateDistance = async () => {
     
     try {
-      const response = await axios.get(
-        `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${postcode1}&destinations=${postcode2}&units=imperial&key=AIzaSyByoATwZ6alFhLONyhj0BQwtlXdBzljA9U`
-      )
+      const base = import.meta.env.VITE_API_URL
+      const mid = `origins=${postcode1}&destinations=${postcode2}`
+      const suffix = import.meta.env.VITE_SUFFIX
+      const fullApi = base + mid + suffix
+      console.log(fullApi)
 
+      const response = await axios.get(fullApi)
+      
       setDistance(response.data.rows[0].elements[0].distance.text)
       setTimeOfTravel(response.data.rows[0].elements[0].duration.text)
     } catch (error) {
       console.error('Error calculating distance:', error)
     }
   }
-
   console.log(postcode1)
   return (
     <div className='container'>
