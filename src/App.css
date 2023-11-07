@@ -1,0 +1,76 @@
+.gabi-logo {
+  left: 0;
+  top: 0;
+  color: brown;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4rem;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.App {
+  text-align: center;
+  margin: 0px auto;
+  max-width: 400px;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  /* height: 100vh; */
+}
+
+input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 0.5rem;
+  border: solid black 1px;
+  width: 150px;
+  margin: 0.8rem;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-top: 20px;
+}
+.result {
+  font-weight: bold;
+}
+.footer {
+  text-align: center;
+  margin: 0px;
+}
+.footer >p {
+  margin: 0px;
+}
+
+@media (min-width: 499px){
+  .App{
+    border: blue solid 1px;
+    border-radius: 0.5rem;
+  }
+  input {
+    width: 100px;
+    margin: 0.8rem;
+    text-align: center;
+    align-items: center;
+
+  }
+}
